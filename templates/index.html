@@ -5,27 +5,31 @@
   <title>GL_Beautifier 1.0</title>
   <meta name="description" content="Tool designed for ML Rule Writers">
   <meta name="author" content="Kamil Wesolowski @kawesolo">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
 </head>
 <body>
 
-<form action="/add_list/" method="POST">
+<form action="/" method="POST">
+    <center><caption><h3>GL_Beautifier 1.0</h3></caption></center>
 <table>
-    <caption><h3>GL_Beautifier 1.0</h3></caption>
 <tbody>
 <tr>
-<td><h4>Add GLs from each product bank:</h4><br><textarea name="gls" rows="30" cols="50"></textarea>
+<td width="10%"></td>
+<td width="40%"><h4>Add GLs from each product bank:</h4><br><textarea name="gls" rows="20" cols="70"></textarea>
 <br><center><input type="submit" value="Add GLs"><br><br>
     For further ideas or encountered bugs contact me at<br>
         <a href="mailto:kawesolo@amazon.pl" target="_blank">kawesolo@amazon.pl</a>
-    </center></td>
-    <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-<td><h4>GLs in your ML model should look like:</h4>
+    </center>
+    <td width="10%"></td>
+<td width="40%">
+<h4>All GLs except those listed below:</h4>
 {% for gl in content %}
 {{gl}}<br>
 {% endfor %}
+<br>
+<a href="/delete" class="button">CLEAR OUTPUT</a>
 </td>
 </tr>
 </tbody>
