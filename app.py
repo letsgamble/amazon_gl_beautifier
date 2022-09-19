@@ -20,7 +20,6 @@ def main():
 
 @app.route('/delete/')
 def delete():
-    print('sesja usunieta')
     session["list"] = []
     session.clear()
     return redirect(url_for('main'))
